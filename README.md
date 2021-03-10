@@ -12,19 +12,6 @@ JWT  ile kullancı kontrolü sağlanmaktadır.
 
 <br/><br/>
 
-ADIM 1 - Github'dan clone edip çalıştırmak için
-> \>git clone https://github.com/hibadem/laravel-vue-todolist.git
->ADIM 2 - Dosyanın kurulu olduğu yere gidin
-> \>cd laravel-vue-todolist/
->ADIM 3 - composer yükleyin
-> \>composer install
-> .env.example dosyasını kopyalayın ve .env dosyası olarak yeniden adlandırın 
-> \>copy .env.example .env
-> Yeni bir anahtar oluşturmak için aşağıdaki komutu çalıştırın
-> \>php artisan key:generate
-> Database migrationlarını çalıştırın
-
-    php artisan migrate
 
 Github'dan clone edip çalıştırmak için
 
