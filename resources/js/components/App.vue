@@ -20,6 +20,9 @@
                     <li class="nav-item">
                         <router-link to="/login" class="nav-link">Giriş Yap</router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link to="/register" class="nav-link">Kayıt Ol</router-link>
+                    </li>
                      <li class="nav-item">
                         <router-link to="/ekleme" class="nav-link">Ekleme</router-link>
                     </li>

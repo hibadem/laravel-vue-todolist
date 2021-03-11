@@ -27,9 +27,11 @@ Route::group([
     Route::get('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     Route::get('me', 'AuthController@me');
+     Route::post('register','AuthController@register'); 
     Route::get('items','ItemController@index');
     Route::post('item/store','ItemController@store');
     Route::put('item/{id}','ItemController@update');
     Route::delete('item/{id}','ItemController@destroy');
+    
 });
 

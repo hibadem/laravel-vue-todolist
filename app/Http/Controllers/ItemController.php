@@ -12,6 +12,12 @@ use Illuminate\Support\Facades\DB;
 
 class ItemController extends Controller
 {
+    /* protected $user;
+    public function __construct()
+    {
+        $this->user = JWTAuth::parseToken()->authenticate();
+    } */
+
     /**
      * Display a listing of the resource.
      *
@@ -58,7 +64,6 @@ class ItemController extends Controller
         $newItem = new Item;
         $newItem->name = $request->item["name"];
         $newItem->user_id = $userid;
-        /* $newItem->user_id = $request->item["user_id"]; */
         $newItem->save();
         return $newItem;
     }

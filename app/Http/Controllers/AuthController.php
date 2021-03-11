@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Illuminate\Support\Str;
+use App\User;
 
 class AuthController extends Controller
 {
@@ -17,8 +18,9 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        /* $this->middleware('auth:api')->except('login'); */
-        $this->middleware('auth:api', ['except' => ['login']]);
+        //  $this->middleware('auth:api')->except('login'); 
+         
+         $this->middleware('auth:api', ['except' => ['login','register']]);
     }
 
     /**
@@ -46,6 +48,24 @@ class AuthController extends Controller
         
        
     }
+    public function register(Request $request){
+        /* $this->validate($request,[
+            'name'=>"required|string",
+            'email'=>"required|email|unique:users",
+            'password'=>"required|string|min:6|"
+        ]); */
+        $user = new User;
+        $user->name = $request->credentials['name'];
+        $user->email = $request->credentials['email'];
+        $user->password = bcrypt($request->credentials['password']);
+        $user->save();
+        /* if($this->loginAfterSignUp()){
+            return $this->login($request);
+        } */
+        return response()->json(['user'=>$user]);
+
+    }
+
     public function checkToken(){
         return response()->json(['success'=>true],200);
     }

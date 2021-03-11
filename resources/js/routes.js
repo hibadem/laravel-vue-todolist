@@ -4,6 +4,7 @@ import App from './components/App.vue';
 import Login from './components/Login.vue';
 import Ekleme from './components/Ekleme.vue';
 import Listeleme from './components/Listeleme.vue';
+import Register from './components/Register.vue';
 
 Vue.use(VueRouter);
 
@@ -24,6 +25,11 @@ export const routes = [
         path:'/sayfalama',
         component: Listeleme
     },
+    {
+        path:'/register',
+        component: Register
+    }
+
     
 
 

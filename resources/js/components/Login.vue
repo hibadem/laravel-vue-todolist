@@ -32,9 +32,7 @@ export default {
                 this.$store.commit('setToken',response.data.token);
                 this.$router.push('/');
                 console.log(response);
-                    
-                    
-                    
+               
             });
         }
     },
