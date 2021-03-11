@@ -43,7 +43,7 @@ dosyanız olduğundan emin olun.
     DB_USERNAME=root
     DB_PASSWORD=
 
-Database migrationlarını çalıştırın
+Veritabanı tablolarını eklemek için
 
     php artisan migrate
 
